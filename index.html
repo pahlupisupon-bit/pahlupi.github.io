@@ -3,13 +3,13 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Portofolio — Pahlupi Supon</title>
+  <title>Portofolio — Pahlupi</title>
   <style>
     :root{
       --bg:#FFFDF6;
       --card:#ffffff;
-      --accent:#00A86B;
-      --accent-2:#FFB86B;
+      --accent:#00A86B; /* hijau terang */
+      --accent-2:#FFB86B; /* oranye lembut */
       --muted:#6b6b6b;
       --radius:14px;
     }
@@ -21,51 +21,82 @@
       -webkit-font-smoothing:antialiased;
     }
     .container{max-width:980px;margin:0 auto}
-    header{display:flex;gap:28px;align-items:center;flex-wrap:wrap;justify-content:center;}
-    .avatar{
-      width:180px;height:180px;object-fit:cover;
-      border-radius:50%;border:3px solid #555;
-      box-shadow:0 6px 18px rgba(0,0,0,0.08)
-    }
-    h1{margin:0;font-size:30px}
+    header{display:flex;gap:18px;align-items:center}
+    .avatar{width:96px;height:96px;border-radius:12px;object-fit:cover;box-shadow:0 6px 18px rgba(0,0,0,0.06)}
+    h1{margin:0;font-size:28px}
     .sub{color:var(--muted);margin-top:6px}
-    .contact{margin-top:8px;font-size:14px}
-    .card{
-      background:var(--card);
-      padding:18px;
-      border-radius:var(--radius);
-      box-shadow:0 6px 24px rgba(0,0,0,0.04);
-      margin-top:18px
-    }
+    .contact{margin-left:auto;text-align:right;font-size:14px}
+    .card{background:var(--card);padding:18px;border-radius:var(--radius);box-shadow:0 6px 24px rgba(0,0,0,0.04);margin-top:18px}
     .skills{display:flex;flex-wrap:wrap;gap:8px;margin-top:8px}
-    .chip{
-      background:linear-gradient(90deg,var(--accent),var(--accent-2));
-      color:white;padding:6px 10px;border-radius:999px;font-size:13px;
-      box-shadow:0 6px 14px rgba(0,0,0,0.06)
-    }
-    .projects{
-      display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
-      gap:12px;margin-top:12px
-    }
-    .proj{
-      padding:12px;border-radius:10px;
-      background:linear-gradient(180deg,#fff,#fcfffb);
-      border:1px solid rgba(0,0,0,0.03)
-    }
-    .download{
-      display:inline-block;background:var(--accent);
-      color:white;padding:10px 14px;border-radius:10px;
-      text-decoration:none;margin-top:10px
-    }
+    .chip{background:linear-gradient(90deg,var(--accent),var(--accent-2));color:white;padding:6px 10px;border-radius:999px;font-size:13px;box-shadow:0 6px 14px rgba(0,0,0,0.06)}
+    .projects{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:12px;margin-top:12px}
+    .proj{padding:12px;border-radius:10px;background:linear-gradient(180deg,#fff,#fcfffb);border:1px solid rgba(0,0,0,0.03)}
+    .download{display:inline-block;background:var(--accent);color:white;padding:10px 14px;border-radius:10px;text-decoration:none;margin-top:10px}
     footer{margin-top:20px;color:var(--muted);font-size:13px;text-align:center}
     @media(max-width:600px){
-      header{flex-direction:column;align-items:center;text-align:center}
+      header{flex-direction:column;align-items:flex-start}
+      .contact{margin-left:0;text-align:left}
     }
   </style>
 </head>
 <body>
   <div class="container">
-
     <header>
-      <!-- FOTO PROFIL -->
-      <img class="avatar" src="PROFILE1.png" alt="Foto Profil">
+      <img class="avatar" src="avatar.jpg" alt="Avatar">
+      <div>
+        <h1>Pahlupi</h1>
+        <div class="sub">Data Analyst (Pemula) — fokus Excel, dashboard & EDA</div>
+        <div style="margin-top:8px;color:var(--muted);font-size:14px">Email: pahlupi@example.com • LinkedIn: linkedin.com/in/pahlupi</div>
+      </div>
+
+      <div class="contact">
+        <div style="font-weight:600;color:var(--accent)">Siap kerja: freelance / kontrak</div>
+        <a class="download" href="CV_Pahlupi.pdf" target="_blank">Download CV</a>
+      </div>
+    </header>
+
+    <section class="card">
+      <h2 style="margin:0 0 8px 0">Tentang Saya</h2>
+      <p style="margin:0;color:var(--muted)">Saya sedang belajar menjadi Data Analyst. Berpengalaman membuat laporan dan analisis menggunakan Excel, membuat dashboard sederhana, dan melakukan EDA untuk menemukan insight bisnis praktis.</p>
+      <div class="skills" style="margin-top:12px">
+        <div class="chip">Excel (Pivot, VLOOKUP)</div>
+        <div class="chip">SQL (dasar)</div>
+        <div class="chip">Google Data Studio</div>
+        <div class="chip">Python (pandas)</div>
+        <div class="chip">Data Cleaning</div>
+      </div>
+    </section>
+
+    <section class="card">
+      <h2 style="margin:0 0 8px 0">Proyek Pilihan</h2>
+      <div class="projects">
+        <div class="proj">
+          <h3 style="margin:0">Analisis Penjualan & HPP Jus Buah</h3>
+          <p style="margin:6px 0;color:var(--muted)">Menghitung HPP per botol 250ml, model subsidi silang, simulasi margin — Excel (spreadsheet HPP & asumsi biaya).</p>
+          <a href="#" target="_blank">Lihat detail</a>
+        </div>
+
+        <div class="proj">
+          <h3 style="margin:0">Dashboard Laporan Keuangan</h3>
+          <p style="margin:6px 0;color:var(--muted)">Dashboard bulanan pemasukan & pengeluaran, chart trend, ringkasan KPI.</p>
+          <a href="#" target="_blank">Lihat dashboard</a>
+        </div>
+
+        <div class="proj">
+          <h3 style="margin:0">Absensi Berdasarkan Kriteria</h3>
+          <p style="margin:6px 0;color:var(--muted)">Format & logika absensi otomatis menggunakan Google Sheets + formula dan validasi.</p>
+          <a href="#" target="_blank">Contoh format</a>
+        </div>
+
+        <div class="proj">
+          <h3 style="margin:0">Chart Readability Improvement</h3>
+          <p style="margin:6px 0;color:var(--muted)">Perbaikan label peta/chart agar nama kota terbaca rapi dan jelas di export PDF/PNG.</p>
+          <a href="#" target="_blank">Preview</a>
+        </div>
+      </div>
+    </section>
+
+    <footer>© 2025 Pahlupi — Built with ❤️ • GitHub: github.com/Pahlupi</footer>
+  </div>
+</body>
+</html>

@@ -4,100 +4,270 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Portofolio — Pahlupi Supon</title>
+
   <style>
     :root{
-      --bg:#FFFDF6;
+      --bg:#E5E7EB;          /* abu utama */
+      --bg-2:#D1D5DB;       /* abu gradient */
       --card:#ffffff;
-      --accent:#00A86B; /* hijau terang */
-      --accent-2:#FFB86B; /* oranye lembut */
-      --muted:#6b6b6b;
+      --accent:#00A86B;
+      --accent-2:#10B981;
+      --muted:#6B7280;
       --radius:14px;
     }
-    *{box-sizing:border-box}
+
+    *{
+      box-sizing:border-box;
+    }
+
     body{
       font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
-      background:linear-gradient(180deg,var(--bg),#F7FFF9);
-      margin:0;padding:28px;color:#111;
+      background:linear-gradient(180deg,var(--bg),var(--bg-2));
+      margin:0;
+      padding:28px;
+      color:#111827;
       -webkit-font-smoothing:antialiased;
     }
-    .container{max-width:980px;margin:0 auto}
-    header{display:flex;gap:18px;align-items:center}
-    .avatar{width:96px;height:96px;border-radius:12px;object-fit:cover;box-shadow:0 6px 18px rgba(0,0,0,0.06)}
-    h1{margin:0;font-size:28px}
-    .sub{color:var(--muted);margin-top:6px}
-    .contact{margin-left:auto;text-align:right;font-size:14px}
-    .card{background:var(--card);padding:18px;border-radius:var(--radius);box-shadow:0 6px 24px rgba(0,0,0,0.04);margin-top:18px}
-    .skills{display:flex;flex-wrap:wrap;gap:8px;margin-top:8px}
-    .chip{background:linear-gradient(90deg,var(--accent),var(--accent-2));color:white;padding:6px 10px;border-radius:999px;font-size:13px;box-shadow:0 6px 14px rgba(0,0,0,0.06)}
-    .projects{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:12px;margin-top:12px}
-    .proj{padding:12px;border-radius:10px;background:linear-gradient(180deg,#fff,#fcfffb);border:1px solid rgba(0,0,0,0.03)}
-    .download{display:inline-block;background:var(--accent);color:white;padding:10px 14px;border-radius:10px;text-decoration:none;margin-top:10px}
-    footer{margin-top:20px;color:var(--muted);font-size:13px;text-align:center}
+
+    .container{
+      max-width:980px;
+      margin:0 auto;
+    }
+
+    header{
+      display:flex;
+      gap:18px;
+      align-items:center;
+    }
+
+    .avatar{
+      width:96px;
+      height:96px;
+      border-radius:12px;
+      object-fit:cover;
+      box-shadow:0 6px 18px rgba(0,0,0,0.08);
+    }
+
+    h1{
+      margin:0;
+      font-size:28px;
+    }
+
+    .sub{
+      color:var(--muted);
+      margin-top:6px;
+    }
+
+    .contact{
+      margin-left:auto;
+      text-align:right;
+      font-size:14px;
+    }
+
+    .card{
+      background:var(--card);
+      padding:18px;
+      border-radius:var(--radius);
+      box-shadow:0 6px 24px rgba(0,0,0,0.06);
+      margin-top:18px;
+    }
+
+    .skills{
+      display:flex;
+      flex-wrap:wrap;
+      gap:8px;
+      margin-top:8px;
+    }
+
+    .chip{
+      background:linear-gradient(90deg,var(--accent),var(--accent-2));
+      color:white;
+      padding:6px 10px;
+      border-radius:999px;
+      font-size:13px;
+      box-shadow:0 4px 12px rgba(0,0,0,0.08);
+    }
+
+    .projects{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+      gap:12px;
+      margin-top:12px;
+    }
+
+    .proj{
+      padding:12px;
+      border-radius:10px;
+      background:linear-gradient(180deg,#fff,#F9FAFB);
+      border:1px solid rgba(0,0,0,0.05);
+    }
+
+    .proj h3{
+      margin-top:0;
+    }
+
+    .proj a{
+      color:var(--accent);
+      text-decoration:none;
+      font-weight:600;
+    }
+
+    .proj a:hover{
+      text-decoration:underline;
+    }
+
+    .download{
+      display:inline-block;
+      background:var(--accent);
+      color:white;
+      padding:10px 14px;
+      border-radius:10px;
+      text-decoration:none;
+      margin-top:10px;
+      transition:0.2s ease;
+    }
+
+    .download:hover{
+      transform:translateY(-2px);
+      opacity:0.95;
+    }
+
+    footer{
+      margin-top:20px;
+      color:var(--muted);
+      font-size:13px;
+      text-align:center;
+    }
+
     @media(max-width:600px){
-      header{flex-direction:column;align-items:flex-start}
-      .contact{margin-left:0;text-align:left}
+      header{
+        flex-direction:column;
+        align-items:flex-start;
+      }
+
+      .contact{
+        margin-left:0;
+        text-align:left;
+      }
     }
   </style>
 </head>
+
 <body>
+
   <div class="container">
+
     <header>
+
       <img class="avatar" src="PROFILE1.png" alt="Avatar">
+
       <div>
         <h1>Pahlupi Supon</h1>
-        <div class="sub">Data Analyst (Pemula) — Excel, Looker studio & EDA</div>
-        <div style="margin-top:8px;color:var(--muted);font-size:14px">Email: pahlupisupon@gmail.com • LinkedIn: linkedin.com/in/pahlupi</div>
+
+        <div class="sub">
+          Data Analyst (Pemula) — Excel, Looker Studio & EDA
+        </div>
+
+        <div style="margin-top:8px;color:var(--muted);font-size:14px">
+          Email: pahlupisupon@gmail.com • LinkedIn: linkedin.com/in/pahlupi
+        </div>
       </div>
 
       <div class="contact">
-        <div style="font-weight:600;color:var(--accent)">Siap kerja: freelance / kontrak</div>
-        <a class="download" href="CV ATS PAHLUPI SUPON.pdf" target="_blank">Download CV</a>
+        <div style="font-weight:600;color:var(--accent)">
+          Siap kerja: Freelance / Kontrak
+        </div>
+
+        <a class="download" href="CV ATS PAHLUPI SUPON.pdf" target="_blank">
+          Download CV
+        </a>
       </div>
+
     </header>
 
     <section class="card">
+
       <h2 style="margin:0 0 8px 0">Tentang Saya</h2>
-      <p style="margin:0;color:var(--muted)">Saya berpengalaman membuat laporan dan analisis menggunakan Excel, membuat dashboard sederhana, dan melakukan EDA untuk menemukan insight bisnis praktis.</p>
+
+      <p style="margin:0;color:var(--muted)">
+        Saya berpengalaman membuat laporan dan analisis menggunakan Excel,
+        membuat dashboard sederhana, dan melakukan EDA untuk menemukan insight bisnis praktis.
+      </p>
+
       <div class="skills" style="margin-top:12px">
-        <div class="chip">MS.Word Basic - Advance </div>
-        <div class="chip">MS.Excel Intermediate </div>
+        <div class="chip">MS Word Basic - Advanced</div>
+        <div class="chip">MS Excel Intermediate</div>
         <div class="chip">SQL Basic</div>
         <div class="chip">Looker Studio</div>
         <div class="chip">Data Cleaning</div>
       </div>
+
     </section>
 
     <section class="card">
+
       <h2 style="margin:0 0 8px 0">Proyek Pilihan</h2>
+
       <div class="projects">
-  
-  <div class="card">
-    <h3>Dashboard Laporan Dispatch & Monitoring</h3>
-    <p>Dashboard bulanan ticketing, aging & revisit,  chart trend, ringkasan performance.</p>
-    <a href="DASBOARD111.png" target="_blank">Lihat dashboard</a>
-  </div>
 
-  <div class="card">
-    <h3>Monitoring reporting</h3>
-    <p>Format & logika Reminder,Revisit & Sequence.</p>
-    <a href="https://docs.google.com/spreadsheets/d/abc123" target="_blank">Contoh format</a>
-  </div>
-    
-  <div class="card">
-    <h3>Sertificate</h3>
-    <p>All Sertificate.</p>
-    <a href="ALLSERTI.pdf" target="_blank">Contoh format</a>
-  </div>
+        <div class="proj">
+          <h3>Dashboard Laporan Dispatch & Monitoring</h3>
+          <p>
+            Dashboard bulanan ticketing, aging & revisit,
+            chart trend, dan ringkasan performance.
+          </p>
 
-  <div class="card">
-    <h3>Sharing Class excel</h3>
-    <p>Sharing class excel basic - intermediate untuk all divisi.</p>
-    <a href="DASBOARD2.png" target="_blank">Preview</a>
-  </div>
-</div>
+          <a href="DASBOARD111.png" target="_blank">
+            Lihat Dashboard
+          </a>
+        </div>
+
+        <div class="proj">
+          <h3>Monitoring Reporting</h3>
+
+          <p>
+            Format & logika reminder, revisit, dan sequence monitoring.
+          </p>
+
+          <a href="https://docs.google.com/spreadsheets/d/abc123" target="_blank">
+            Contoh Format
+          </a>
+        </div>
+
+        <div class="proj">
+          <h3>Certificate</h3>
+
+          <p>
+            Kumpulan sertifikat pelatihan dan pembelajaran.
+          </p>
+
+          <a href="ALLSERTI.pdf" target="_blank">
+            Lihat Sertifikat
+          </a>
+        </div>
+
+        <div class="proj">
+          <h3>Sharing Class Excel</h3>
+
+          <p>
+            Sharing class Excel basic - intermediate untuk seluruh divisi.
+          </p>
+
+          <a href="DASBOARD2.png" target="_blank">
+            Preview
+          </a>
+        </div>
+
+      </div>
+
     </section>
 
-    <footer>© 2025 Pahlupi — IG @pahlupis, FB @Pahlupi Supon • GitHub: github.com/Pahlupi</footer>
+    <footer>
+      © 2025 Pahlupi —
+      IG @pahlupis • FB @Pahlupi Supon • GitHub: github.com/Pahlupi
+    </footer>
+
   </div>
+
 </body>
 </html>
